@@ -1,26 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { myContainer } from './inversify';
+import { Inj, TYPES } from './testing';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const inj = myContainer.get<Inj>(TYPES.Inj);
+
+	return <div>{inj.log()}</div>;
 }
 
 export default App;
