@@ -2,14 +2,13 @@ import 'reflect-metadata';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { myContainer } from './inversify';
-import { Inj, TYPES } from './testing';
+import { myContainer } from './di/container/inversify';
+import { TYPES } from './di/container/types';
+import { ClientService } from './di/services/client.service';
 
-const inj = myContainer.get<Inj>(TYPES.Inj);
-inj.log();
+const clientService = myContainer.get<ClientService>(TYPES.ClientService);
+clientService.logger();
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -17,8 +16,3 @@ ReactDOM.render(
 	</React.StrictMode>,
 	document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

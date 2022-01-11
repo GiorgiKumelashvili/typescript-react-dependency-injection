@@ -1,8 +1,8 @@
 import { injectable } from 'inversify';
 
 @injectable()
-export class Test {
+export class CarService {
 	printMessage() {
-		console.log('I am alive!');
+		console.log('hello from carr');
 	}
 }
