@@ -6,13 +6,16 @@ import App from './App';
 import { myContainer } from './di/container/inversify';
 import { TYPES } from './di/container/types';
 import { ClientService } from './di/services/client.service';
+import { StoreProvider } from './store';
 
 const clientService = myContainer.get<ClientService>(TYPES.ClientService);
 clientService.logger();
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<StoreProvider>
+			<App />
+		</StoreProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
