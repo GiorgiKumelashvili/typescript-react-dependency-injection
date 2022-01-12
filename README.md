@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React app with multiple di examples
 
 This project uses inversify as dependency injection library and contains multiple examples of of how to use inversify.js with [react](https://github.com/facebook/create-react-app) and [mobx](https://github.com/mobxjs/mobx)
 
