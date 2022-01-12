@@ -1,5 +1,5 @@
 const TYPE = {
-	IStor: Symbol.for('IStor'),
+	Store: Symbol.for('Store'),
 };
 
 export default TYPE;
