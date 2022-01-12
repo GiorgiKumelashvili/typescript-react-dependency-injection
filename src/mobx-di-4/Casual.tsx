@@ -12,6 +12,9 @@ export const Casual = observer(() => {
 			<h2>{store.retunum}</h2>
 			<h2>{store.addNum}</h2>
 			<button onClick={() => store.add()}>nc</button>
+
+			<h1>gender: {store.user.gender}</h1>
+			<button onClick={() => store.user.switchGender()}>switch</button>
 		</div>
 	);
 });
