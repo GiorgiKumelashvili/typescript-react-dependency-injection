@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Casual from './Casual';
 
-export default class MobxSecond extends React.Component {
+export default class MobxThird extends React.Component {
 	public render() {
 		return (
 			<div>
