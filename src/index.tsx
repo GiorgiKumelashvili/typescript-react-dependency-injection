@@ -5,6 +5,12 @@ import MobxSecond from './mobx-di-2/MobxSecond';
 import MobxThird from './mobx-di-3/MobxThird';
 import MobxFourth from './mobx-di-4/MobxFourth';
 
+/**
+ * ? information
+ *
+ * 		| modules used are :  inversify, mobx, inversify-react, mobx-react, reflect-metadata
+ */
+
 ReactDOM.render(
 	<div>
 		<MobxFourth />

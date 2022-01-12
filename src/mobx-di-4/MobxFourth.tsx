@@ -1,19 +1,13 @@
-import 'reflect-metadata';
-import * as React from 'react';
 import { Provider } from 'inversify-react';
 import { Casual } from './Casual';
 import { Container } from 'inversify';
 
-const myContainer = new Container({ autoBindInjectable: true });
+const myContainer = new Container({ autoBindInjectable: true, defaultScope: 'Singleton' });
 
-export default class MobxFourth extends React.Component {
-	public render() {
-		return (
-			<div>
-				<Provider container={myContainer}>
-					<Casual />
-				</Provider>
-			</div>
-		);
-	}
-}
+const MobxFourth = () => (
+	<Provider container={myContainer}>
+		<Casual />
+	</Provider>
+);
+
+export default MobxFourth;
