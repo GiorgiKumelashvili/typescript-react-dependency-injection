@@ -1,38 +1,30 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { myContainer } from './di/container/inversify';
-import { TYPES } from './di/container/types';
-import { ClientService } from './di/services/client.service';
-import { useStore } from './store';
+// import { Provider } from "mobx-react"
+import * as React from 'react';
+import Casual from './mobx-di/Casual';
 
-class App extends React.Component<{}, {}> {
-	// @inject(ElfState) private elfState: ElfState;
-	// @inject(ElfService) private elfService: ElfService;
+// import Store  from './store/store';
 
+// const store = {
+//   store: new Store()
+// }
+
+class App extends React.Component {
+	// public render() {
+	//   return (
+	//     <Provider {...store}>
+	//     <div>
+	//       <Casual  />
+	//     </div>
+	//     </Provider>
+	//   );
+	// }
 	public render() {
 		return (
 			<div>
-				{/* <div>{JSON.stringify(userStore.user)}</div> */}
-				<div>{clientService.getPrices()}</div>
+				<Casual />
 			</div>
 		);
 	}
 }
-
-// function App() {
-// 	const clientService = myContainer.get<ClientService>(TYPES.ClientService);
-// 	const store = useStore();
-
-// 	useEffect(() => {
-// 		console.log(store.getAll());
-// 	}, []);
-
-// 	return (
-// 		<div>
-// 			{/* <div>{JSON.stringify(userStore.user)}</div> */}
-// 			<div>{clientService.getPrices()}</div>
-// 		</div>
-// 	);
-// }
 
 export default App;
