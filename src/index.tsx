@@ -1,10 +1,11 @@
 import 'reflect-metadata';
 import ReactDOM from 'react-dom';
-import MobxFirst from './mobx-di/MobxFirst';
-import MobxSecond from './mobx-di-2/MobxSecond';
-import MobxThird from './mobx-di-3/MobxThird';
-import MobxFourth from './mobx-di-4/MobxFourth';
-import MobxFifth from './mobx-di-5/MobxFifth';
+// import MobxFirst from './mobx-di/MobxFirst';
+// import MobxSecond from './mobx-di-2/MobxSecond';
+// import MobxThird from './mobx-di-3/MobxThird';
+// import MobxFourth from './mobx-di-4/MobxFourth';
+// import MobxFifth from './mobx-di-5/MobxFifth';
+import MobxSixth from './mobx-di-6-router/MobxSixth';
 
 /**
  * ? information
@@ -14,7 +15,8 @@ import MobxFifth from './mobx-di-5/MobxFifth';
 
 ReactDOM.render(
 	<div>
-		<MobxFifth />
+		<MobxSixth />
+		{/* <MobxFifth /> */}
 		{/* <MobxFourth />
 		<MobxThird />
 		<MobxSecond />
