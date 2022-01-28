@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import { routerDeclares } from './router.declares';
-import { WatchHistoryMobx } from './watchHistoryMobx';
+import { WatchRouterHistory } from './watchRouterHistory';
 
 export const Casual = () => (
     <Router>
@@ -32,7 +32,7 @@ export const Casual = () => (
         </nav>
 
         <Switch>
-            <WatchHistoryMobx>
+            <WatchRouterHistory>
                 <div className="container mt-5">
                     {Object.values(routerDeclares).map((el) => (
                         <Route
@@ -43,7 +43,7 @@ export const Casual = () => (
                         />
                     ))}
                 </div>
-            </WatchHistoryMobx>
+            </WatchRouterHistory>
         </Switch>
     </Router>
 );
