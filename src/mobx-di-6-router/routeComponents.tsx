@@ -1,4 +1,4 @@
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useInjection } from 'inversify-react';
 import { observer } from 'mobx-react';
 import { Fragment } from 'react';
@@ -19,13 +19,11 @@ export const AboutNested = observer(() => {
 
 export const Home = observer(() => {
     const routerStore = useInjection(RouterStore);
-    const history = useHistory();
 
     return (
         <Fragment>
             <p>==============[content ☝]=================</p>
-            <pre>router location data: {JSON.stringify(history.location)}</pre>
-
+            <pre>router history data: {JSON.stringify(routerStore.getHistory())}</pre>
             <p>router query param x: {routerStore.getQueryParameter('x') ?? 'null'}</p>
 
             <button className="btn btn-dark" onClick={() => routerStore.getHistory().push('/about')}>

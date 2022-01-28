@@ -6,7 +6,6 @@ interface RouterDeclares {
         name: string;
         exact?: boolean;
         component: () => JSX.Element;
-        builder?: (...args: any) => string;
     };
 }
 
@@ -24,10 +23,6 @@ export const routerDeclares = createFrozeObject<RouterDeclares>()({
     aboutNested: {
         name: '/about/:aboutId',
         component: AboutNested,
-
-        builder(aboutId: number) {
-            return this.name.replace(':aboutId', aboutId.toString());
-        },
     },
 
     root: {
