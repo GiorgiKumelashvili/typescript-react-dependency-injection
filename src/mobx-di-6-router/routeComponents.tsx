@@ -8,6 +8,7 @@ export const Users = observer(() => <h1>Users</h1>);
 export const About = observer(() => <h1>About</h1>);
 export const AboutNested = observer(() => {
     const routerParams = useParams();
+    console.log('from nested');
 
     return (
         <Fragment>

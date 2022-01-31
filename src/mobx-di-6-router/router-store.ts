@@ -36,6 +36,10 @@ class RouterStore {
         const urlSearchParams = new URLSearchParams(this.getLocation()?.search);
         return urlSearchParams.get(key);
     }
+
+    get historyNotNull() {
+        return this._history !== null && this._history !== undefined;
+    }
 }
 
 export default RouterStore;
