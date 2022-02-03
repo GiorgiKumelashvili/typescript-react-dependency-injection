@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { Singleton } from './container';
+import { Singleton } from './container_decorators';
 
 @Singleton
 class Store {

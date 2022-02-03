@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 import { inject } from 'inversify';
 import Store from './store';
-import { Injectable } from './container';
+import { Injectable } from './container_decorators';
 
 @Injectable
 class User {

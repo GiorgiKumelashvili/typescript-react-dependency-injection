@@ -1,6 +1,6 @@
-import { Container, decorate, injectable } from 'inversify';
+import { Container } from 'inversify';
 
-interface Constructor {
+export interface Constructor {
     new (...args: any[]): any;
 }
 
@@ -14,14 +14,4 @@ export abstract class IocContainerFinal {
 
         return this._IocContainer;
     }
-}
-
-export function Singleton(cls: Constructor) {
-    IocContainerFinal.getContainer().bind(cls).toSelf().inSingletonScope();
-    decorate(injectable(), cls);
-}
-
-export function Injectable(cls: Constructor) {
-    IocContainerFinal.getContainer().bind(cls).toSelf();
-    decorate(injectable(), cls);
 }
